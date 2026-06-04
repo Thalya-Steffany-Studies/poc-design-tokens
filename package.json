@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/Thalya-Steffany-Studies/poc-design-tokens.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
