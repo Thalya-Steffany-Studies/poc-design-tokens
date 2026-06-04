@@ -1,0 +1,44 @@
+name: Merge Workflow
+
+on:
+  merge_group:
+    branches:
+      - main
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute validation script
+        run: node .github/workflows/utils/executeSytaxValidation tokens.json
+
+  increase-and-publish:
+    runs-on: ubuntu-latest
+    needs: validate-json
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Configure Git Bot
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Increase version
+        run: npm run increase-version
+
+      - name: Push changes
+        run: |
+          git push -o ci.skip
+          git push --tags
+
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
+
