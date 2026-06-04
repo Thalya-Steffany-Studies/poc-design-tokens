@@ -6,15 +6,12 @@ on:
       - main
 
 jobs:
-  validate-json:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Execute validation script
-        run: ./.github/workflows/_validate-json.yaml
+  validate-syntax:
+    uses: ./.github/workflows/_validate-json.yaml
 
   increase-and-publish:
     runs-on: ubuntu-latest
-    needs: validate-json
+    needs: validate-syntax
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
