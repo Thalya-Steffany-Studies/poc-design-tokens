@@ -1,14 +1,8 @@
 name: Validate JSON Syntax
 
 on:
-  pull_request:
-    branches:
-      - main
-
-  merge_group:
-    branches:
-      - main
-
+  workflow_call:
+  
 jobs:
   check-json:
     runs-on: ubuntu-latest
@@ -21,6 +15,6 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Execute validation script
+      - name: Execute JSON format validation script
         run: node .github/workflows/utils/executeSyntaxValidation tokens.json
 
