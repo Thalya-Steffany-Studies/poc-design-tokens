@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import {verifyJsonSyntax} from './verifyJsonSyntax'
 
 function executeSytaxValidation() {
     /**Get filename add as param in GitHub Actions*/
