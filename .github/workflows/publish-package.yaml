@@ -32,13 +32,13 @@ jobs:
       - name: Increase version
         run: npm run increase-version
 
-      - name: Push changes
-        run: |
-          git push -o ci.skip
-          git push --tags
-
       - name: Publish package
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+     
+      - name: Push changes
+        run: |
+          git push -o ci.skip
+          git push --tags
 
