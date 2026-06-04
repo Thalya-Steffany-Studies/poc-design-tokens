@@ -11,7 +11,7 @@ export function executeSytaxValidation() {
     process.exit(1);
   }
 
-  const filePath = path.resolve('./.github/workflows/utils/verifyJsonSyntax.js');
+  const filePath = path.resolve(gthActFileName);
 
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
@@ -32,3 +32,4 @@ export function executeSytaxValidation() {
   }
 }
 
+executeSytaxValidation();
