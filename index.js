@@ -3,3 +3,4 @@ export * from './tokens.json'
 console.log('Tokens loaded!')
 console.log('Teste 1 - Publicacao npm')
 console.log('Teste 2 - Publicacao npm')
+console.log('Teste 3 - Publicacao npm')
