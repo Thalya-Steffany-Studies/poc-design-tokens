@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
-import {verifyJsonSyntax} from './verifyJsonSyntax'
+import {verifyJsonSyntax} from './verifyJsonSyntax.js'
 
-function executeSytaxValidation() {
+export function executeSytaxValidation() {
     /**Get filename add as param in GitHub Actions*/
   const gthActFileName = process.argv[2];
 
