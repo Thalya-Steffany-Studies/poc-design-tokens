@@ -36,8 +36,11 @@ jobs:
       - name: Increase version
         run: npm run increase-version
 
+      - name: Check package.json content
+        run: cat package.json
+
       - name: Publish package
-        run: npm publish --provenance
+        run: npm publish --access public --provenance
      
       - name: Push changes
         run: |
