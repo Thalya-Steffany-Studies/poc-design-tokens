@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Execute validation script
-        run: node .github/workflows/utils/executeSytaxValidation tokens.json
+        run: node .github/workflows/utils/executeSyntaxValidation tokens.json
 
   increase-and-publish:
     runs-on: ubuntu-latest

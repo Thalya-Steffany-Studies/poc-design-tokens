@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-function executeSytaxValidation() {
-    /**Get filename add as param in GitHub Actions*/
+function executeSyntaxValidation() {
+  /**Get filename add as param in GitHub Actions*/
   const gthActFileName = process.argv[2];
 
   if (!gthActFileName) {
