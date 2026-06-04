@@ -1,6 +1,6 @@
 {
-  "name": "@thalya.coimbra.org/poc-design-tokens-n",
-  "version": "1.16.0",
+  "name": "poc-design-tokens",
+  "version": "1.17.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
