@@ -1,10 +1,10 @@
 import fs from "fs";
 import path from "path";
 
-function verifyJsonSyntax(json) {
+export function verifyJsonSyntax(json) {
   try {
     const jsonString = typeof json !== "string" ? JSON.stringify(json) : json;
-    JSON.parse(json);
+    JSON.parse(jsonString);
     return true;
   } catch (e) {
     console.error({ e });
