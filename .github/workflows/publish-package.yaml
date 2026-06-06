@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: "20"
           registry-url: 'https://registry.npmjs.org'
-          scope: '@thalya.coimbra.org'
+          # scope: '@thalya.coimbra.org'
 
       - name: Configure Git Bot
         run: |
