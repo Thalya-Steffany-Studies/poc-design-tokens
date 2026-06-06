@@ -1,6 +1,6 @@
 {
   "name": "poc-design-tokens-n",
-  "version": "1.45.0",
+  "version": "1.46.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
