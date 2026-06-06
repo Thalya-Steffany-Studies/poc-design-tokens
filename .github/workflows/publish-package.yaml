@@ -39,7 +39,7 @@ jobs:
         run: cat package.json
 
       - name: Publish package
-        run: npm publish --provenance
+        run: npm publish
      
       - name: Push changes
         run: |
